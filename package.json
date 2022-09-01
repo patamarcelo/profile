@@ -10,21 +10,23 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "pinia": "^2.0.11",
     "@quasar/extras": "^1.0.0",
+    "pinia": "^2.0.11",
     "quasar": "^2.6.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0"
   },
   "devDependencies": {
+    "@quasar/app-vite": "^1.0.0",
+    "autoprefixer": "^9.8.8",
     "eslint": "^8.10.0",
-    "eslint-plugin-vue": "^9.0.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
-    "@quasar/app-vite": "^1.0.0",
-    "autoprefixer": "^10.4.2"
+    "eslint-plugin-vue": "^9.0.0",
+    "postcss": "^7.0.39",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   },
   "engines": {
     "node": "^18 || ^16 || ^14.19",
