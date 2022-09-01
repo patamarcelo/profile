@@ -1,6 +1,15 @@
 <template>
-  <q-page class="flex flex-center">
-    <h1 class="text-blue">Profile Page</h1>
+  <q-page class="flex flex-center column">
+    <div class="row">
+      <h1 class="text-blue">Profile Page </h1>
+    </div>
+    <div class="row">
+      <q-btn round :loading="true" color="black" icon="camera_rear" size="xl">
+        <template v-slot:loading>
+          <q-spinner-gears />
+        </template>
+      </q-btn>
+    </div>
   </q-page>
 </template>
 
