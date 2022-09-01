@@ -1,13 +1,16 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-page-container>
-      <router-view />
+    <q-page-container class="main-layout">
+      <div class="p-20 pt-10">
+        <IndexPage class="index-page rounded-lg shadow-12" />
+      </div>
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
 import { defineComponent, ref } from 'vue'
+import IndexPage from '../pages/IndexPage.vue'
 
 const linksList = [
   {
@@ -57,9 +60,9 @@ const linksList = [
 export default defineComponent({
   name: 'MainLayout',
 
-  // components: {
-  //   // EssentialLink
-  // },
+  components: {
+    IndexPage
+  },
 
   setup () {
     const leftDrawerOpen = ref(false)
@@ -74,3 +77,14 @@ export default defineComponent({
   }
 })
 </script>
+
+<style scoped>
+.main-layout {
+  background: rgb(2, 0, 36);
+  background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(62, 0, 120, 1) 50%, rgba(0, 212, 255, 1) 100%);
+}
+
+.index-page {
+  background-color: whitesmoke;
+}
+</style>
