@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-center items-start rounded-lg">
-    <div class="w-full lg:w-1/4 bg-gray-600 text-white rounded-tl-lg rounded-bl-lg l-container">
+    <div class="w-full lg:w-1/4 bg-gray-600 text-white rounded-tl-lg rounded-bl-none lg:rounded-bl-lg l-container lg:rounded-tr-none rounded-tr-lg">
       <div class="flex column  items-center justify-center pt-7 pb-5">
         <q-avatar size="150px">
           <img src="../../src/assets/user_1.jpg">
@@ -11,7 +11,7 @@
       <left-page />
     </div>
 
-    <div class="flex column items-center text-bold justify-start lg:w-3/4 w-full rounded-tr-lg rounded-br-lg pl-3 r-container">
+    <div class="flex column items-center text-bold justify-start lg:w-3/4 w-full rounded-tr-lg rounded-br-none lg:rounded-br-lg pl-3 r-container">
       <h1>rigth side</h1>
     </div>
   </q-page>
