@@ -33,10 +33,10 @@
     <q-separator color="grey" class="w-full" />
   </div>
   <div class="flex justify-around mx-5">
-    <div class="flex m-5  w-1/4 items-center justify-center flag">
+    <div class="flex m-3 sm:m-5   items-center justify-center content-center flag">
       <h1>Ingles</h1>
     </div>
-    <div class="flex m-5 w-1/4 items-center justify-center flag">
+    <div class="flex m-3 sm:m-5  items-center justify-center content-center flag">
       <h1>Portuges</h1>
     </div>
   </div>
@@ -99,5 +99,7 @@ export default defineComponent({
   .flag{
     border: 2px solid white;
     border-radius: 100%;
+    height: 70px;
+    width: 70px;
   }
 </style>
