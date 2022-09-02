@@ -1,6 +1,6 @@
 <template>
-  <q-layout class="bg-white flex column items-center justify-center">
-    <div class="flex column items-center justify-center w-2/5 p-10 rounded-3xl shadow-xl login-box">
+  <q-layout class="flex column items-center justify-center ">
+    <div class="flex  column bg-gray-50 items-center justify-center w-5/6  lg:p-10 lg:w-2/5 p-4 lg:m-0 m-5  rounded-3xl shadow-xl login-box">
       <div class="container w-full flex column items-center justify-between">
         <q-input v-model="state.password" label="Password" class="mb-10 w-3/5" @keydown.enter="loginSys()" />
         <q-btn color="primary" label="Enter" @click="loginSys()" class="w-3/5" />
@@ -50,7 +50,5 @@ export default {
 </script>
 
 <style>
-.login-box {
-  background-color: rgb(128, 128, 128, 0.15)
-}
+
 </style>
