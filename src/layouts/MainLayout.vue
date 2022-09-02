@@ -2,15 +2,18 @@
   <q-layout view="lHh Lpr lFf">
     <q-page-container class="main-layout">
       <div class="p-20 pt-10">
-        <IndexPage class="index-page rounded-lg shadow-12" />
+        <LoginPage v-if="system.isAuth" />
+        <IndexPage class="index-page rounded-lg shadow-12" v-else />
       </div>
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, reactive } from 'vue'
 import IndexPage from '../pages/IndexPage.vue'
+import LoginPage from '../pages/LoginPage.vue'
+import { SystemStore } from '../stores/System'
 
 const linksList = [
   {
@@ -61,15 +64,21 @@ export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    IndexPage
+    IndexPage,
+    LoginPage
   },
 
   setup () {
+    const system = SystemStore()
     const leftDrawerOpen = ref(false)
-
+    const state = reactive({
+      login: true
+    })
     return {
       essentialLinks: linksList,
       leftDrawerOpen,
+      state,
+      system,
       toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value
       }
