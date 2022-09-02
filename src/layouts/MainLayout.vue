@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-page-container class="main-layout">
-      <div class="lg:p-20 lg:pt-10 p-3">
+      <div class="lg:p-5  p-3">
         <LoginPage v-if="system.isAuth" />
         <IndexPage class="index-page rounded-lg shadow-12" v-else />
       </div>
