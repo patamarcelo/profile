@@ -3,7 +3,7 @@
     <q-page-container class="main-layout">
       <div class="lg:p-5  p-3">
         <LoginPage v-if="system.isAuth" />
-        <IndexPage class="index-page rounded-lg shadow-12" v-else />
+        <IndexPage class="index-page rounded-lg shadow-12 items-grow" v-else />
       </div>
     </q-page-container>
   </q-layout>
