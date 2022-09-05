@@ -36,8 +36,8 @@
     <div class="flex m-3 sm:m-5   items-center justify-center content-center flag">
       <h1>English</h1>
     </div>
-    <div class="flex m-3 sm:m-5  items-center justify-center content-center flag">
-      <h1 class="p-3">Portuguese</h1>
+    <div class="flex m-3 sm:m-5  items-center justify-center content-center p-3 flag">
+      <h1>Portuguese</h1>
     </div>
   </div>
 </template>
@@ -99,7 +99,7 @@ export default defineComponent({
 .flag {
   border: 2px solid white;
   border-radius: 100%;
-  height: 70px;
-  width: 70px;
+  height: 90px;
+  width: 90px;
 }
 </style>
