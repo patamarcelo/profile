@@ -105,7 +105,7 @@
                     </h1>
                 </div>
                 <div class="flex items-start lg:justify-start justify-around">
-                    <div v-for="(data, index) in state.data_skills_add" :key="index" class="m-1 mr-9 w-1/4 ">
+                    <div v-for="(data, index) in state.data_skills_add" :key="index" class="m-1 mr-9 w-1/4 whitespace-nowrap">
                         <q-icon class="ml-3 mr-1 mb-1 align-text-bottom" name="fas fa-circle"
                             style="color: #ccc; font-size: 0.5em;" />
                         {{ state.data_skills_add[index] }}

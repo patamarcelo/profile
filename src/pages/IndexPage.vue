@@ -12,11 +12,13 @@
         </div>
         <left-page />
       </div>
-      <div class=" lg:w-2/3 w-full  rounded-tr-lg rounded-br-none  pl-3 r-container items-stretch border-2">
+      <div class="flex lg:w-2/3 w-full  rounded-tr-lg rounded-br-none  pl-3 r-container items-stretch border-2">
         <right-page />
       </div>
     </div>
-
+    <q-section>
+      <q-btn class="glossy mt-4" rounded color="primary" label="Portfolio"  icon="fa-solid fa-eye-slash"/>
+    </q-section>
     <portfolio-page />
 
   </q-page>
