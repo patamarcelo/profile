@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row-reverse m-3 rounded-xl mt-10 w-full  items-stretch p-4 justify-between  shadow-2xl main-div-port ">
+  <div class="flex flex-row-reverse my-3 mt-10 p-4 w-full  items-stretch  justify-between  shadow-2xl main-div-port">
     <div class="flex column p-4 flex-1 items-start justify-start  ml-2  overflow-auto max-h-96">
       Rice brokers System ( my company's system)
         https://github.com/patamarcelo/ricefoods
@@ -38,7 +38,7 @@
         used by all company employees to control cargo loading operations.
 
     </div>
-    <div class="flex column w-2/4 justify-center">
+    <div class="flex column w-2/4 justify-center rounded-lg">
       <CaroulselQuas />
     </div>
   </div>
