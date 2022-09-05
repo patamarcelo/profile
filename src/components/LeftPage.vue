@@ -34,10 +34,10 @@
   </div>
   <div class="flex justify-around mx-5">
     <div class="flex m-3 sm:m-5   items-center justify-center content-center flag">
-      <h1>Ingles</h1>
+      <h1>English</h1>
     </div>
     <div class="flex m-3 sm:m-5  items-center justify-center content-center flag">
-      <h1>Portuges</h1>
+      <h1 class="p-3">Portuguese</h1>
     </div>
   </div>
 </template>
@@ -96,10 +96,10 @@ export default defineComponent({
 </script>
 
 <style>
-  .flag{
-    border: 2px solid white;
-    border-radius: 100%;
-    height: 70px;
-    width: 70px;
-  }
+.flag {
+  border: 2px solid white;
+  border-radius: 100%;
+  height: 70px;
+  width: 70px;
+}
 </style>
