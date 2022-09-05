@@ -4,8 +4,10 @@ export const SystemStore = defineStore('system', {
   id: 'system',
   state: () => ({
     isAuth: true,
+    skelon: false,
     counter: 23,
-    picture: 'https://storageapi.fleek.co/7d351ace-1fcf-4bc2-be39-c54631049d11-bucket/img/user_1.jpeg'
+    picture:
+      'https://storageapi.fleek.co/7d351ace-1fcf-4bc2-be39-c54631049d11-bucket/img/user_1.jpeg'
   }),
   getters: {
     doubleCount: (state) => state.counter * 2
@@ -13,6 +15,9 @@ export const SystemStore = defineStore('system', {
   actions: {
     changeLog () {
       this.isAuth = !this.isAuth
+    },
+    changeSkel () {
+      this.skelon = !this.skelon
     }
   }
 })

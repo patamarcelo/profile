@@ -1,8 +1,8 @@
 <template>
-  <q-page class="flex flex-center flex-shrink  rounded-lg bg-green-300">
+  <q-page class="flex flex-center flex-shrink  rounded-lg bg-gray-200">
     <div class="w-full flex shadow-lg">
       <div
-        class="w-full lg:w-1/3 bg-gray-600 text-white rounded-tl-lg rounded-bl-none lg:rounded-bl-lg l-container lg:rounded-tr-none rounded-tr-lg">
+        class="w-full lg:w-1/3 bg-gray-800 text-white rounded-tl-lg rounded-bl-none  l-container lg:rounded-tr-none rounded-tr-lg">
         <div class="flex column  items-center justify-center pt-7 pb-5">
           <q-avatar size="150px">
             <img :src="system.picture" class="object-cover">
@@ -12,25 +12,25 @@
         </div>
         <left-page />
       </div>
-      <div
-        class=" lg:w-2/3 w-full  rounded-tr-lg rounded-br-none lg:rounded-br-lg pl-3 r-container items-stretch border-2">
+      <div class=" lg:w-2/3 w-full  rounded-tr-lg rounded-br-none  pl-3 r-container items-stretch border-2">
         <right-page />
       </div>
     </div>
-    <div class="flex m-3 rounded-xl mt-10 bg-red-300 w-full items-center justify-center shadow-lg">
-      <h1>Portfolio</h1>
-    </div>
+
+    <portfolio-page />
+
   </q-page>
 </template>
 
 <script>
+import PortfolioPage from 'src/components/PortfolioPage.vue'
 import { defineComponent, reactive } from 'vue'
 import LeftPage from '../components/LeftPage.vue'
 import RightPage from '../components/RightPage.vue'
 import { SystemStore } from '../stores/System'
 
 export default defineComponent({
-  components: { LeftPage, RightPage },
+  components: { LeftPage, RightPage, PortfolioPage },
   name: 'IndexPage',
   setup () {
     const system = SystemStore()

@@ -2,8 +2,9 @@
   <q-layout view="lHh Lpr lFf">
     <q-page-container class="main-layout">
       <div class="lg:p-5  p-3">
-        <LoginPage v-if="system.isAuth" />
-        <IndexPage class="index-page rounded-lg shadow-12 items-grow" v-else />
+        <SkeltLogin v-if="system.skelon == true" />
+        <LoginPage v-if="system.isAuth && !system.skelon" />
+        <IndexPage class="index-page rounded-lg shadow-12 items-grow" v-if="!system.isAuth && !system.skelon" />
       </div>
     </q-page-container>
   </q-layout>
@@ -13,6 +14,7 @@
 import { defineComponent, ref, reactive } from 'vue'
 import IndexPage from '../pages/IndexPage.vue'
 import LoginPage from '../pages/LoginPage.vue'
+import SkeltLogin from '../components/SkeltLogin.vue'
 import { SystemStore } from '../stores/System'
 
 const linksList = [
@@ -65,7 +67,8 @@ export default defineComponent({
 
   components: {
     IndexPage,
-    LoginPage
+    LoginPage,
+    SkeltLogin
   },
 
   setup () {
@@ -91,9 +94,5 @@ export default defineComponent({
 .main-layout {
   background: rgb(2, 0, 36);
   background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(62, 0, 120, 1) 50%, rgba(0, 212, 255, 1) 100%);
-}
-
-.index-page {
-  background-color: whitesmoke;
 }
 </style>

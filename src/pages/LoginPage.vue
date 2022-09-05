@@ -6,7 +6,7 @@
         <div class="flex column justify-start w-2/3 font">
           <span class="text-bold">Hey, </span>
           <p>
-            This is my portolio and my personal webpage, if you wanna check it out, please talk to me before and ask me
+            This is my portolio and my personal webpage, if you wanna check it out, please talk to me before and ask
             my password
           </p>
           <span class="mt-4">
@@ -41,6 +41,7 @@ export default {
     const $q = useQuasar()
     const system = SystemStore()
     const { changeLog } = system
+    const { changeSkel } = system
     const state = reactive({
       password: '',
       rp: '123'
@@ -53,13 +54,17 @@ export default {
       })
     }
 
-    return { state, system, changeLog, msg }
+    return { state, system, changeLog, changeSkel, msg }
   },
   methods: {
     loginSys () {
       if (this.state.password === '123devmp') {
         console.log('aceertou')
-        this.changeLog()
+        this.changeSkel()
+        setTimeout(() => {
+          this.changeSkel()
+          this.changeLog()
+        }, 2000)
       } else {
         this.state.password = ''
         this.msg()
