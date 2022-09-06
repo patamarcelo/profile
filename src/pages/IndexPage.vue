@@ -17,9 +17,11 @@
       </div>
     </div>
     <q-section>
-      <q-btn class="glossy mt-4" rounded color="primary" label="Portfolio"  icon="fa-solid fa-eye-slash"/>
+      <q-btn class="glossy my-4" rounded color="primary" label="Portfolio"  icon="fa-solid fa-eye-slash"/>
     </q-section>
+    <portfolio-page class-row="flex-row-reverse"/>
     <portfolio-page />
+    <portfolio-page class-row="flex-row-reverse"/>
 
   </q-page>
 </template>
