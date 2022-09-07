@@ -11,8 +11,7 @@
           </p>
           <span class="mt-4">
             <q-icon class="mr-3 mb-1" name="fa-brands fa-whatsapp" style="color: green; font-size: 1.4em;" />
-            <a href="https://wa.me/+5551997090862" target="blank_" class=" underline text-blue-600">Send whatsapp
-              message</a>
+            <a href="https://wa.me/+5551997090862" target="blank_" class=" underline text-blue-600">Send message</a>
           </span>
         </div>
         <div class="flex column  justify-start ">

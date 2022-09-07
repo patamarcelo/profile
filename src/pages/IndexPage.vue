@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex flex-center flex-shrink  rounded-lg bg-gray-200">
+  <q-page class="flex flex-center flex-shrink bg-gray-200" :class="!state.showSkelPort ? 'rounded-lg' : 'rounded-none'">
     <div class="w-full flex shadow-lg">
       <div
         class="w-full lg:w-1/3 bg-gray-800 text-white rounded-tl-lg rounded-bl-none  l-container lg:rounded-tr-none rounded-tr-lg">
@@ -17,14 +17,15 @@
       </div>
     </div>
     <q-section>
+      <div id="skelport"></div>
       <q-btn class="glossy my-4" rounded color="primary"
         :label="!state.showPortfolio ? 'Show Portfolio' : 'Hide Portfolio'"
         :icon="state.showPortfolio ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash'" @click="showPort()">
       </q-btn>
     </q-section>
     <template v-if="state.showPortfolio">
-      <portfolio-page class-row="flex-row-reverse" :project-len="16" project-name="rice" />
-      <portfolio-page class-row="flex-row" :project-len="8" project-name="social" />
+      <portfolio-page class-row="flex-row-reverse" class-last="mb-5" :project-len="16" project-name="rice" />
+      <portfolio-page class-row="flex-row" class-last="mb-0" :project-len="8" project-name="social" />
     </template>
   </q-page>
 
@@ -39,12 +40,14 @@ import { defineComponent, reactive } from 'vue'
 import LeftPage from '../components/LeftPage.vue'
 import RightPage from '../components/RightPage.vue'
 import { SystemStore } from '../stores/System'
+import { ProjectStore } from '../stores/Project'
 
 export default defineComponent({
   components: { LeftPage, RightPage, PortfolioPage, SkeltonPortfolio },
   name: 'IndexPage',
   setup () {
     const system = SystemStore()
+    const project = ProjectStore()
     const state = reactive({
       showPortfolio: false,
       showSkelPort: false,
@@ -69,7 +72,11 @@ export default defineComponent({
     })
 
     function scrollToBottom () {
-      console.log('gogogogo')
+      console.log('gogogo')
+      const elem = document.getElementById('skelport')
+      setTimeout(() => {
+        elem.scrollIntoView({ behavior: 'smooth' })
+      }, 100)
     }
 
     function showPort () {
@@ -85,7 +92,7 @@ export default defineComponent({
         state.showPortfolio = false
       }
     }
-    return { state, system, showPort }
+    return { state, system, showPort, project }
   }
 
 })

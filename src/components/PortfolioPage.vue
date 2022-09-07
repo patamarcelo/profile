@@ -1,5 +1,6 @@
 <template>
-  <div class="flex mb-5 p-4 w-full  items-stretch  justify-between bg-white  shadow-12 main-div-port" :class="classRow">
+  <div class="flex p-4 w-full  items-stretch  justify-between bg-white  shadow-12 main-div-port"
+    :class="[classRow, classLast]">
     <div
       class="flex  px-4 lg:flex-1 w-full items-start justify-between lg:border-none border-b-4 border-t-4  overflow-auto max-h-96 text-justify">
       <div class="p-2">
@@ -52,6 +53,7 @@ export default defineComponent({
   components: { ProjectDescripton },
   props: {
     classRow: String,
+    classLast: String,
     projectLen: Number,
     projectName: String
   },

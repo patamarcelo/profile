@@ -4,7 +4,7 @@
       <div class="lg:p-5  p-3">
         <SkeltLogin v-if="system.skelon == true" />
         <LoginPage v-if="system.isAuth && !system.skelon" />
-        <IndexPage class="index-page rounded-lg shadow-12 items-grow" v-if="!system.isAuth && !system.skelon" />
+        <IndexPage class="index-page shadow-12 items-grow" v-if="!system.isAuth && !system.skelon" />
       </div>
     </q-page-container>
   </q-layout>
