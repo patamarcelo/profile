@@ -12,33 +12,42 @@
         </div>
         <left-page />
       </div>
-      <div class="flex lg:w-2/3 w-full  rounded-tr-lg rounded-br-none  pl-3 r-container items-stretch border-2">
+      <div class="flex lg:w-2/3 w-full  rounded-br-none  pl-3 r-container items-stretch border-2">
         <right-page />
       </div>
     </div>
     <q-section>
-      <q-btn class="glossy my-4" rounded color="primary" label="Portfolio"  icon="fa-solid fa-eye-slash"/>
+      <q-btn class="glossy my-4" rounded color="primary"
+        :label="!state.showPortfolio ? 'Show Portfolio' : 'Hide Portfolio'"
+        :icon="state.showPortfolio ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash'" @click="showPort()">
+      </q-btn>
     </q-section>
-    <portfolio-page class-row="flex-row-reverse"/>
-    <portfolio-page />
-    <portfolio-page class-row="flex-row-reverse"/>
-
+    <template v-if="state.showPortfolio">
+      <portfolio-page class-row="flex-row-reverse" :project-len="16" project-name="rice" />
+      <portfolio-page class-row="flex-row" :project-len="8" project-name="social" />
+    </template>
   </q-page>
+
+  <skelton-portfolio v-if="state.showSkelPort" />
+
 </template>
 
 <script>
 import PortfolioPage from 'src/components/PortfolioPage.vue'
+import SkeltonPortfolio from 'src/components/SkeltonPortfolio.vue'
 import { defineComponent, reactive } from 'vue'
 import LeftPage from '../components/LeftPage.vue'
 import RightPage from '../components/RightPage.vue'
 import { SystemStore } from '../stores/System'
 
 export default defineComponent({
-  components: { LeftPage, RightPage, PortfolioPage },
+  components: { LeftPage, RightPage, PortfolioPage, SkeltonPortfolio },
   name: 'IndexPage',
   setup () {
     const system = SystemStore()
     const state = reactive({
+      showPortfolio: false,
+      showSkelPort: false,
       data_info_2: [
         {
           icon: 'email',
@@ -58,7 +67,25 @@ export default defineComponent({
           info: 'Porto Alegre - RS, Brazil'
         }]
     })
-    return { state, system }
+
+    function scrollToBottom () {
+      console.log('gogogogo')
+    }
+
+    function showPort () {
+      if (!state.showPortfolio) {
+        state.showSkelPort = true
+        scrollToBottom()
+        setTimeout(() => {
+          state.showSkelPort = false
+          state.showPortfolio = true
+        }, 2000)
+      } else {
+        state.showSkelPort = false
+        state.showPortfolio = false
+      }
+    }
+    return { state, system, showPort }
   }
 
 })

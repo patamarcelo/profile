@@ -98,6 +98,7 @@ export default defineComponent({
 <style>
 .flag {
   border: 2px solid rgba(128, 128, 128, 0.8);
+  border: 2px solid rgba(17, 169, 30, 0.8);
   border-radius: 100%;
   height: 90px;
   width: 90px;
