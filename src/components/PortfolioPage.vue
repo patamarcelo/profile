@@ -55,7 +55,7 @@ export default defineComponent({
     projectLen: Number,
     projectName: String
   },
-  setup(props) {
+  setup (props) {
     const state = reactive({
       data: 'texto',
       projectNameData: props.projectName,
@@ -69,7 +69,7 @@ export default defineComponent({
     }
   },
   methods: {
-    getLink(index) {
+    getLink (index) {
       return `https://storageapi.fleek.co/7d351ace-1fcf-4bc2-be39-c54631049d11-bucket/projects/${this.state.projectNameData}/f${index}.png`
     }
   }
