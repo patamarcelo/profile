@@ -2,33 +2,35 @@
   <div>
     <div class="flex flex-start flex-col p-5 text-justify">
       <div class="flex flex-col justify-start items-start mb-5">
-        <p class="text-h4 font-bold">Sistema Operacional - Project name</p>
-        <small class="text-blue-600 underline italic"><a href="http://ricefoods.com.br"
-            target="_blank">www.ricefoods.com.br</a></small>
+        <p class="text-h4 font-bold">{{ dataProject.title }}</p>
+
+        <small class="text-blue-600 underline italic mr-10"><a :href="dataProject.href" target="_blank">{{
+            dataProject.access.link
+        }}</a></small>
+        <small class="text-gray-600 italic text-bold" v-if="dataProject.access.user && dataProject.access.password">
+        user: {{ dataProject.access.user }} / password: {{ dataProject.access.password }}
+        </small>
+
       </div>
       <div class="">
         <p class="text-xl font-bold underline italic mb-1">Background and Problem statement</p>
-        <p class="text-base pl-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum totam minima
-          eligendi.
-          Repellendus dolores totam sint tempore. Illum sint delectus, explicabo cupiditate nulla, quis
-          quas
-          nam recusandae ratione, et voluptatum.</p>
+        <p class="text-base pl-4">
+          {{ dataProject.problem }}
+        </p>
       </div>
       <div class="mt-5">
         <p class="text-xl font-bold italic mb-1 underline">Background and Problem statement</p>
-        <p class="text-sm pl-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum totam minima
-          eligendi.
-          Repellendus dolores totam sint tempore. Illum sint delectus, explicabo cupiditate nulla, quis
-          quas
-          nam recusandae ratione, et voluptatum.</p>
+        <p class="text-sm pl-4">
+          {{ dataProject.idea }}
+        </p>
       </div>
       <div class="mt-5">
         <p class="text-xl font-bold underline italic mb-5">Some features developed: </p>
         <div class="pl-4 flex">
-          <div class="w-1/3 items-center justify-start my-1" v-for="i in 12" :key="i">
+          <div class="w-1/3 items-center justify-start my-1" v-for="data in dataProject.features" :key="data">
             <div class="row items-center">
               <q-icon name="fa-regular fa-circle-check text-green-600" />
-              <p class="text-bold italic ml-2">Coffee</p>
+              <p class="text-bold italic ml-2">{{ data }}</p>
             </div>
           </div>
         </div>
@@ -36,11 +38,9 @@
       </div>
       <div class="mt-5">
         <p class="text-xl font-bold italic mb-1 underline">Final....</p>
-        <p class="text-xs italic pl-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum totam minima
-          eligendi.
-          Repellendus dolores totam sint tempore. Illum sint delectus, explicabo cupiditate nulla, quis
-          quas
-          nam recusandae ratione, et voluptatum.</p>
+        <p class="text-xs italic pl-4">
+          {{ dataProject.final }}
+        </p>
       </div>
     </div>
 
@@ -52,6 +52,9 @@ import { defineComponent, reactive } from 'vue'
 
 export default defineComponent({
   name: 'ProjectDescripton',
+  props: {
+    dataProject: Object
+  },
   setup () {
     const state = reactive({
       data: ''

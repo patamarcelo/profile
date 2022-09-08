@@ -3,9 +3,9 @@
     <div
       class="flex  column bg-gray-50 items-center justify-center w-5/6  lg:p-10 lg:w-4/5 p-4 lg:m-0 m-5  rounded-3xl shadow-xl login-box">
       <div class="flex justify-around items-start m-6">
-        <div class="flex column justify-start w-2/3 font">
+        <div class="flex column justify-start w-4/5 font">
           <span class="text-bold">Hey, </span>
-          <p>
+          <p class="text-justify">
             This is my portolio and my personal webpage, if you wanna check it out, please talk to me before and ask
             my password
           </p>

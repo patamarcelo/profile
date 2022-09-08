@@ -2,7 +2,7 @@
     <div>
         <div class="flex w-full bg-white justify-around items-center p-3" v-for="i in 3" :key="i"
             :class="i == 2 ? 'flex-row-reverse' : 'flex-row'">
-            <div class="w-1/2">
+            <div class="lg:w-1/2 w-full">
                 <q-skeleton height="250px" class="m-2 mt-5" />
             </div>
             <div class="flex-1  items-center  rounded-tr-lg  pb-5 flex flex-col rounded-br-none  pl-3  justify-between">

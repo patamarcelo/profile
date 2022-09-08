@@ -24,8 +24,10 @@
       </q-btn>
     </q-section>
     <template v-if="state.showPortfolio">
-      <portfolio-page class-row="flex-row-reverse" class-last="mb-5" :project-len="16" project-name="rice" />
-      <portfolio-page class-row="flex-row" class-last="mb-0" :project-len="8" project-name="social" />
+      <portfolio-page v-for="(data, index) in project.projects" :key="index" :project-name="data.name"
+        :project-len="data.project.pictures" :class-row="index % 2 ? 'flex-row-reverse' : 'flex-row'"
+        :class-last="index == (project.countProjects - 1) ? '' : 'mb-5'"
+        :data-project="data.project" />
     </template>
   </q-page>
 

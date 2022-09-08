@@ -4,7 +4,7 @@
     <div
       class="flex  px-4 lg:flex-1 w-full items-start justify-between lg:border-none border-b-4 border-t-4  overflow-auto max-h-96 text-justify">
       <div class="p-2">
-        <ProjectDescripton />
+        <ProjectDescripton :data-project="dataProject" />
         <q-dialog v-model="state.showDialog">
           <q-card>
             <q-toolbar class="p-4 text-bold bg-gray-800 text-white">
@@ -15,7 +15,7 @@
             </q-toolbar>
 
             <q-card-section>
-              <ProjectDescripton />
+              <ProjectDescripton :data-project="dataProject" />
 
             </q-card-section>
           </q-card>
@@ -55,7 +55,8 @@ export default defineComponent({
     classRow: String,
     classLast: String,
     projectLen: Number,
-    projectName: String
+    projectName: String,
+    dataProject: Object
   },
   setup (props) {
     const state = reactive({
