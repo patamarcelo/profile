@@ -8,7 +8,7 @@
             dataProject.access.link
         }}</a></small>
         <small class="text-gray-600 italic text-bold" v-if="dataProject.access.user && dataProject.access.password">
-        user: {{ dataProject.access.user }} / password: {{ dataProject.access.password }}
+          user: {{ dataProject.access.user }} / password: {{ dataProject.access.password }}
         </small>
 
       </div>
@@ -19,25 +19,20 @@
         </p>
       </div>
       <div class="mt-5">
-        <p class="text-xl font-bold italic mb-1 underline">Background and Problem statement</p>
-        <p class="text-sm pl-4">
-          {{ dataProject.idea }}
-        </p>
-      </div>
-      <div class="mt-5">
         <p class="text-xl font-bold underline italic mb-5">Some features developed: </p>
         <div class="pl-4 flex">
-          <div class="w-1/3 items-center justify-start my-1" v-for="data in dataProject.features" :key="data">
+          <div class=" items-center justify-start my-1" v-for="data in dataProject.features" :key="data">
             <div class="row items-center">
-              <q-icon name="fa-regular fa-circle-check text-green-600" />
-              <p class="text-bold italic ml-2">{{ data }}</p>
+              <span>
+                <p class="ml-2 m-2"> <q-icon name="fa-regular fa-circle-check text-green-600" class="mr-2" />{{ data }}</p>
+              </span>
             </div>
           </div>
         </div>
 
       </div>
       <div class="mt-5">
-        <p class="text-xl font-bold italic mb-1 underline">Final....</p>
+        <p class="text-xl font-bold italic mb-1 underline">Final</p>
         <p class="text-xs italic pl-4">
           {{ dataProject.final }}
         </p>

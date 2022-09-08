@@ -57,7 +57,7 @@ export default {
   },
   methods: {
     loginSys () {
-      if (this.state.password === '123devmp') {
+      if (this.state.password === this.system.password) {
         console.log('aceertou')
         this.changeSkel()
         setTimeout(() => {
