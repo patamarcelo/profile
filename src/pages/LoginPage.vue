@@ -6,7 +6,7 @@
         <div class="flex column justify-start w-4/5 font">
           <span class="text-bold">Hey, </span>
           <p class="text-justify">
-            This is my portolio and my personal webpage, if you wanna check it out, please talk to me before and ask
+            This is my portfolio and my personal webpage, if you wanna check it out, please talk to me before and ask
             my password
           </p>
           <span class="mt-4">
