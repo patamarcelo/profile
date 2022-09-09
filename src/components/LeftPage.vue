@@ -32,12 +32,12 @@
     </div>
     <q-separator color="grey" class="w-full" />
   </div>
-  <div class="flex justify-around mx-5">
-    <div class="flex m-3 sm:m-5   items-center justify-center content-center flag">
-      <h1>English</h1>
-    </div>
+  <div class="flex justify-around  mx-5">
     <div class="flex m-3 sm:m-5  items-center justify-center content-center p-3 flag">
       <h1>Portuguese</h1>
+    </div>
+    <div class="flex m-3 sm:m-5   items-center justify-center content-center flag">
+      <h1>English</h1>
     </div>
   </div>
 </template>

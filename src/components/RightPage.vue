@@ -57,19 +57,22 @@
                 </div>
                 <q-container class="ml-3">
                     <div class="inline-grid gap-3">
-                        <!-- <h1>UNDER CONSTRUCTION</h1> -->
                         <q-section v-for="(data, index) in state.data_proud" :key="index">
-                            <div class="flex">
-                                <div class="flex column justify-center items-center">
+                            <div class="flex col text-justify justify-start flex-nowrap">
+                                <div class="flex column justify-center items-center mr-5">
                                     <q-icon size="sm" class="ml-3 mb-1 text-gray-500" :name="data.icon" />
                                 </div>
-                                <div class="flex column items-start ml-6">
-                                    <p class="text-bold">
-                                        {{ data.description }}
-                                    </p>
-                                    <p class="text-gray-600">
-                                        {{ data.title }}
-                                    </p>
+                                <div class="flex column justify-start items-start ml-1">
+                                    <div class="row">
+                                        <p class="text-bold">
+                                            {{ data.description }}
+                                        </p>
+                                    </div>
+                                    <div class="row">
+                                        <p class="text-gray-600">
+                                            {{ data.title }}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </q-section>
@@ -85,8 +88,8 @@
                     </h1>
                 </div>
                 <q-container class="ml-3">
-                    <div class="flex justify-between w-[70%] ml-2 mr-auto">
-                        <q-chip v-for="(data, index) in state.data_skills" :key="index" class="bg-blue-100 mx-4 my-5"
+                    <div class="flex justify-between w-[70%]">
+                        <q-chip v-for="(data, index) in state.data_skills" :key="index" class="bg-blue-100 lg:mx-3 mx-1 my-5"
                             size="16px">
                             <q-avatar v-if="data.type == 'icon'" :icon="data.icon" class="bg-indigo-300"
                                 text-color="white" size="32px" />
@@ -106,7 +109,8 @@
                     </h1>
                 </div>
                 <div class="flex items-start lg:justify-start justify-around">
-                    <div v-for="(data, index) in state.data_skills_add" :key="index" class="m-1 mr-9 w-1/4 whitespace-nowrap">
+                    <div v-for="(data, index) in state.data_skills_add" :key="index"
+                        class="m-1 mr-9 w-1/4 whitespace-nowrap">
                         <q-icon class="ml-3 mr-1 mb-1 align-text-bottom" name="fas fa-circle"
                             style="color: #ccc; font-size: 0.5em;" />
                         {{ state.data_skills_add[index] }}
@@ -133,16 +137,20 @@ export default defineComponent({
       data_proud: [
         {
           icon: 'fa fa-graduation-cap',
-          title: 'I have spent the last 5 years studying programming from scratch on the internet',
+          title: 'Spent the last 5 years studying programming on the internet, i started from zero.',
           description: 'Self Learning'
         }, {
           icon: 'fa fa-star',
-          title: 'I developed from scratch a system for my own company to control operations and it worked like a charm',
+          title: 'Developed from scratch a system for my own company to control operations and it worked like a charm.',
           description: 'My Own Company - My own Project'
         }, {
-          icon: '',
-          title: '',
-          description: ''
+          icon: 'fa fa-chart-line',
+          title: 'Developed a trade bot to work at binance, and code some starategys like Move Avarage, Relative Strength Index, Trailing Stop Loss/Gain and more...',
+          description: 'Trade Bot '
+        }, {
+          icon: 'fa fa-robot',
+          title: 'Developed some scripts to do the repetitive  work, and automate a bunch of process that i had in my company.',
+          description: 'Python Scripts'
         }
       ],
       data_skills: [
