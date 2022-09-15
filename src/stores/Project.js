@@ -5,6 +5,56 @@ export const ProjectStore = defineStore('prtoject', {
   state: () => ({
     projects: [
       {
+        name: 'binancescript',
+        project: {
+          title: 'Binance TradeBot - Script',
+          access: {
+            link: '',
+            user: '',
+            password: ''
+          },
+          href: '',
+          pictures: 8,
+          problem:
+            'Involved In the stock market for over 10 years, and a few years ago in the crypto market, the need arose to build a BOT to automate operations according to the strategies created. In YouTube tutorials and reading Binance documentation, I developed a BOT to operate on the exchange using an API ( KEY and SECRET ).',
+          idea: 'idea that we can work on',
+          features: [
+            'WebSocket receiving coin data in real time',
+            'Using libraries like TA-Lib, I build buy and sell strategies like SRI, Move Average, Trailing Stop Loss/Gain',
+            'All executed orders sent the information by email at the time of the operation',
+            'All trading history saved in JSON file, by currency pair',
+            'Deployed on a server that ran 24/7'
+          ],
+          final:
+            'Used it for some time, it ran very well obeying all the programmed guidelines.'
+        }
+      },
+      {
+        name: 'stockinformation',
+        project: {
+          title: 'Stock Information - Script',
+          access: {
+            link: '',
+            user: '',
+            password: ''
+          },
+          href: '',
+          pictures: 7,
+          problem:
+            'In order to record all the operations carried out in the Brazilian stock market, the need arose to scrape all the invoices of the operations, get all the information and save it in a database, using scripts in Python and PostgreSQL as a Database.',
+          idea: 'idea that we can work on',
+          features: [
+            'Read and save all information from pdf files',
+            'Handle data and save operations, differentiating by user in DB',
+            'Get quotes from companies in real time from yahoo finance, and once a day, send by email the current result of the operation in a pdf file',
+            'Used ElephantSQL as remote database',
+            'Through calculations, generate the results of operations when there is a sale, showing average purchase price, Taxes to be collected in accordance with Brazilian legislation and more...'
+          ],
+          final:
+            'Program used to collect income tax for the current year (2022), with the results of operations on the stock market.'
+        }
+      },
+      {
         name: 'rice',
         project: {
           title: 'Rice Brokers - System',

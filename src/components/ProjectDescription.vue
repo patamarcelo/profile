@@ -32,7 +32,7 @@
 
       </div>
       <div class="mt-5">
-        <p class="text-xl font-bold italic mb-1 underline">Final</p>
+        <p class="text-xl font-bold italic mb-1 underline">Finally</p>
         <p class="text-xs italic pl-4">
           {{ dataProject.final }}
         </p>

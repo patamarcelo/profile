@@ -10,8 +10,8 @@
                         </h1>
                     </div>
                     <p class="text-justify">
-                        Graduated in administration, but passionate about technology, I started the computer science
-                        course
+                        Graduated in Administration, but passionate about technology, I started the computer science
+                        college
                         at the age of 18 but soon changed to Business Administration because of the family company, and
                         in
                         the last 14 years I have worked there, but always in the system, data part , controls and
