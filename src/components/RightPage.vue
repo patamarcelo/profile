@@ -10,8 +10,8 @@
                         </h1>
                     </div>
                     <p class="text-justify">
-                        Graduated in Administration, but passionate about technology, I started the computer science
-                        college
+                        Graduated in Bussiness Administration, but passionate about technology, I started the Computer Science
+                        College
                         at the age of 18 but soon changed to Business Administration because of the family company, and
                         in
                         the last 14 years I have worked there, but always in the system, data part , controls and
@@ -60,7 +60,7 @@
                         <q-section v-for="(data, index) in state.data_proud" :key="index">
                             <div class="flex col text-justify justify-start flex-nowrap">
                                 <div class="flex column justify-center items-center mr-5">
-                                    <q-icon size="sm" class="ml-3 mb-1 text-gray-500" :name="data.icon" />
+                                    <q-icon size="sm" class="ml-3 mb-1 text-blue-500" :name="data.icon" />
                                 </div>
                                 <div class="flex column justify-start items-start ml-1">
                                     <div class="row">
@@ -117,15 +117,20 @@
                     </div>
                 </div>
             </q-section>
+            <q-section>
+                <TimelinePage />
+            </q-section>
         </q-page-container>
     </q-layout>
 </template>
 
 <script>
 import { defineComponent, reactive } from 'vue'
+import TimelinePage from './TimelinePage.vue'
 
 export default defineComponent({
   name: 'RightPage',
+  components: { TimelinePage },
   setup () {
     const state = reactive({
       about: '',
