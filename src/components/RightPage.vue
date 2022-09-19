@@ -1,7 +1,7 @@
 <template>
     <q-layout class="">
         <q-page-container class="flex column justify-around m-2 mt-0 ml-0 p-3 items-stretch">
-            <q-section class="mb-10">
+            <q-section class="mb-10 w-full">
                 <div class="flex row w-full">
                     <div>
                         <h1 class="text-gray-600 text-xl  mb-6">
@@ -27,7 +27,7 @@
                 </div>
             </q-section>
 
-            <q-section class="mb-10">
+            <q-section class="mb-10 w-full">
                 <div class="flex row w-full">
                     <h1 class="text-gray-600 text-xl  mb-6">
                         {{ state.title_education }}
@@ -48,7 +48,7 @@
 
                 </div>
             </q-section>
-            <q-section class="mb-10">
+            <q-section class="mb-10 w-full">
                 <div class="flex row w-full">
                     <h1 class="text-gray-600 text-xl  mb-6">
                         {{ state.title_proud }}
@@ -56,7 +56,7 @@
                     </h1>
                 </div>
                 <q-container class="ml-3">
-                    <div class="inline-grid gap-3">
+                    <div class="inline-grid gap-3 mr-6">
                         <q-section v-for="(data, index) in state.data_proud" :key="index">
                             <div class="flex col text-justify justify-start flex-nowrap">
                                 <div class="flex column justify-center items-center mr-5">
@@ -117,7 +117,7 @@
                     </div>
                 </div>
             </q-section>
-            <q-section>
+            <q-section class="w-full">
                 <TimelinePage />
             </q-section>
         </q-page-container>
