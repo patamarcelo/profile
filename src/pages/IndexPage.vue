@@ -19,6 +19,7 @@
     <q-section>
       <div id="skelport"></div>
       <q-btn class="glossy my-4" rounded color="primary"
+        :loading="!!state.showSkelPort"
         :label="!state.showPortfolio ? 'Show Portfolio' : 'Hide Portfolio'"
         :icon="state.showPortfolio ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash'" @click="showPort()">
       </q-btn>
