@@ -18,18 +18,15 @@
     </div>
     <q-section>
       <div id="skelport"></div>
-      <q-btn class="glossy my-4" rounded color="primary"
-        :loading="!!state.showSkelPort"
+      <q-btn class="glossy my-4" rounded color="primary" :loading="!!state.showSkelPort"
         :label="!state.showPortfolio ? 'Show Portfolio' : 'Hide Portfolio'"
         :icon="state.showPortfolio ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash'" @click="showPort()">
       </q-btn>
     </q-section>
     <template v-if="state.showPortfolio">
-      <portfolio-page v-for="(data, index) in project.projects" :key="index" :project-name="data.name"
-        :project-len="data.project.pictures" :class-row="index % 2 ? 'flex-row-reverse' : 'flex-row'"
-        :class-last="index == (project.countProjects - 1) ? '' : 'mb-5'"
-        :data-project="data.project" />
+      <PanelsPortfolioPage />
     </template>
+
   </q-page>
 
   <skelton-portfolio v-if="state.showSkelPort" />
@@ -37,16 +34,16 @@
 </template>
 
 <script>
-import PortfolioPage from 'src/components/PortfolioPage.vue'
 import SkeltonPortfolio from 'src/components/SkeltonPortfolio.vue'
 import { defineComponent, reactive } from 'vue'
 import LeftPage from '../components/LeftPage.vue'
 import RightPage from '../components/RightPage.vue'
 import { SystemStore } from '../stores/System'
 import { ProjectStore } from '../stores/Project'
+import PanelsPortfolioPage from '../components/PanelsPortfolioPage.vue'
 
 export default defineComponent({
-  components: { LeftPage, RightPage, PortfolioPage, SkeltonPortfolio },
+  components: { LeftPage, RightPage, SkeltonPortfolio, PanelsPortfolioPage },
   name: 'IndexPage',
   setup () {
     const system = SystemStore()

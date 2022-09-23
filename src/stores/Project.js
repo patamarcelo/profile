@@ -5,6 +5,33 @@ export const ProjectStore = defineStore('prtoject', {
   state: () => ({
     projects: [
       {
+        name: 'rice',
+        project: {
+          title: 'Rice Brokers - System',
+          access: {
+            link: 'www.ricefoods.com.br',
+            user: '',
+            password: ''
+          },
+          href: 'http://www.ricefoods.com.br',
+          pictures: 16,
+          problem:
+            "System was created with the Python language, using the Django Framework that works on the MVT model. published my company's website in this framework, and within the same project I created the system to control Orders, Commissions, Loads of each order, classification of loads, invoices... The data is all handled in Python on the backend, using PostgreSql as the database. the Front-end was made in Django templates, with CSS, Bootstrap, javascript. Today I would probably do all the Front in Vuejs making ajax requests, using Django as backend.",
+          idea: 'idea that we can work on',
+          features: [
+            'CRUD to control everything (suppliers, Customers, Orders, Loads…), load report with weighted average of classifications per order, invoice report, commission report, chart with order price tracking per customer, summary table monthly shipments, limited access for employees;',
+            'Files such as excel spreadsheets of orders, pdf of Notes, photos from home, all saved directly in dropbox;',
+            "e-mail sent to each client with the Notes and Guides according to the panel's specifications, and if the same was released to be sent; reading an xml file on the system to record data such as value, weight, nf number and issue date;",
+            'table with unloading forecast based on the date of the invoice, considering several factors such as customer, number of vehicles already scheduled or maximum weight per day allowed per customer, transit time from each destination.',
+            'added modals on the home screen with ajax calls to be able to update the data in the backend without having to reload the page, making changes directly to the table',
+            'created table with filters to control commissions, with all possible types of data filters',
+            'CSS and Midia query to mobile responsive html with info table, infinite scroll'
+          ],
+          final:
+            'used by all company employees to control cargo loading operations.'
+        }
+      },
+      {
         name: 'binancescript',
         project: {
           title: 'Binance TradeBot - Script',
@@ -52,33 +79,6 @@ export const ProjectStore = defineStore('prtoject', {
           ],
           final:
             'Program used to collect income tax for the current year (2022), with the results of operations on the stock market.'
-        }
-      },
-      {
-        name: 'rice',
-        project: {
-          title: 'Rice Brokers - System',
-          access: {
-            link: 'www.ricefoods.com.br',
-            user: '',
-            password: ''
-          },
-          href: 'http://www.ricefoods.com.br',
-          pictures: 16,
-          problem:
-            "System was created with the Python language, using the Django Framework that works on the MVT model. published my company's website in this framework, and within the same project I created the system to control Orders, Commissions, Loads of each order, classification of loads, invoices... The data is all handled in Python on the backend, using PostgreSql as the database. the Front-end was made in Django templates, with CSS, Bootstrap, javascript. Today I would probably do all the Front in Vuejs making ajax requests, using Django as backend.",
-          idea: 'idea that we can work on',
-          features: [
-            'CRUD to control everything (suppliers, Customers, Orders, Loads…), load report with weighted average of classifications per order, invoice report, commission report, chart with order price tracking per customer, summary table monthly shipments, limited access for employees;',
-            'Files such as excel spreadsheets of orders, pdf of Notes, photos from home, all saved directly in dropbox;',
-            "e-mail sent to each client with the Notes and Guides according to the panel's specifications, and if the same was released to be sent; reading an xml file on the system to record data such as value, weight, nf number and issue date;",
-            'table with unloading forecast based on the date of the invoice, considering several factors such as customer, number of vehicles already scheduled or maximum weight per day allowed per customer, transit time from each destination.',
-            'added modals on the home screen with ajax calls to be able to update the data in the backend without having to reload the page, making changes directly to the table',
-            'created table with filters to control commissions, with all possible types of data filters',
-            'CSS and Midia query to mobile responsive html with info table, infinite scroll'
-          ],
-          final:
-            'used by all company employees to control cargo loading operations.'
         }
       },
       {
