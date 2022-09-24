@@ -1,6 +1,6 @@
 <template>
-    <div class="flex column p-4 m-4 mt-1 w-full  items-stretch  justify-between bg-white  shadow-12 rounded-bl-lg rounded-br-lg">
-        <q-tabs v-model="tab" dense class="text-grey" active-color="primary" indicator-color="primary" align="justify"
+    <div class="flex column p-4 m-4 mt-1 mb-0 w-full  items-stretch  justify-between bg-white  shadow-12 rounded-bl-lg rounded-br-lg">
+        <q-tabs v-model="tab" dense class="text-grey w-full" active-color="primary" indicator-color="primary" align="justify"
             narrow-indicator>
             <q-tab v-for="(data, index) in project.projects" :key="index"
             :name="data.name" :label="data.project.title" />
@@ -58,3 +58,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.q-tab-panels.q-panel-parent {
+    width: 100%;
+}
+</style>
