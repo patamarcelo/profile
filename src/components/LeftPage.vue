@@ -57,7 +57,7 @@ export default defineComponent({
         }, {
           icon: 'fas fa-globe',
           title: 'Website',
-          info: 'www.mpata.eth.limo'
+          info: 'https://mpata.eth.limo | password: #!/devmp'
         }, {
           icon: 'fas fa-birthday-cake',
           title: 'Birth Date',
