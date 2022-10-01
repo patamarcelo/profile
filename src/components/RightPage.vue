@@ -108,7 +108,7 @@
                         <q-separator color="" size="2px" />
                     </h1>
                 </div>
-                <div class="flex items-start lg:justify-start justify-around">
+                <div class="flex items-start justify-between lg:mr-0 mr-10">
                     <div v-for="(data, index) in state.data_skills_add" :key="index"
                         class="m-1 mr-9 w-1/4 whitespace-nowrap">
                         <q-icon class="ml-3 mr-1 mb-1 align-text-bottom" name="fas fa-circle"
@@ -165,6 +165,7 @@ export default defineComponent({
         { icon: 'https://storageapi.fleek.co/7d351ace-1fcf-4bc2-be39-c54631049d11-bucket/icons/tail.svg', name: 'Tailwind CSS', type: 'pic' },
         { icon: 'https://storageapi.fleek.co/7d351ace-1fcf-4bc2-be39-c54631049d11-bucket/icons/pinia.svg', name: 'Pinia', type: 'pic' },
         { icon: 'https://cdn.quasar.dev/logo-v2/svg/logo.svg', name: 'Quasar Framework', type: 'pic' },
+        { icon: 'https://storageapi.fleek.co/7d351ace-1fcf-4bc2-be39-c54631049d11-bucket/icons/react.svg', name: 'React', type: 'pic' },
         { icon: 'https://storageapi.fleek.co/7d351ace-1fcf-4bc2-be39-c54631049d11-bucket/icons/css.svg', name: 'CSS', type: 'pic' },
         { icon: 'https://storageapi.fleek.co/7d351ace-1fcf-4bc2-be39-c54631049d11-bucket/icons/html.svg', name: 'HTML5', type: 'pic' },
         { icon: 'https://storageapi.fleek.co/7d351ace-1fcf-4bc2-be39-c54631049d11-bucket/icons/boot.svg', name: 'Bootstrap', type: 'pic' },
