@@ -33,7 +33,8 @@
                 Brazil
             </q-timeline-entry>
 
-            <q-timeline-entry title="Ricefoods | Grao Dourado " subtitle="2010 - 2021" class="w-full" icon="fas fa-user-tie">
+            <q-timeline-entry title="Ricefoods | Grao Dourado " subtitle="2010 - 2021" class="w-full"
+                icon="fas fa-user-tie">
                 <div>
                     Rice Broker focused on supplying national industries, with specific customers.
                     Grao Dourado was created to serve the purchases in the national market.
@@ -81,10 +82,17 @@
                 </div>
             </q-timeline-entry>
 
-            <q-timeline-entry title="Valutech" subtitle="2022" class="w-full" icon="fas fa-chart-line">
+            <q-timeline-entry title="Valutech" subtitle="2021 - Current Working..." class="w-full"
+                icon="fas fa-chart-line">
                 <div>
                     Investor in a Valuation startup, working together with the other partners in decision-making for the
-                    company and all sectors, especially in strategic decisions.
+                    company and all sectors, especially in strategic decisions. Working as developer to help team as
+                    well.
+                    <div v-for="(data, index) in state.valutech" :key="index" class="m-1 mt-2 mr-9 ">
+                        <q-icon class="ml-3 text-gray-700 mr-1 mb-1 align-text-bottom" name="fas fa-circle"
+                            style="font-size: 0.5em;" />
+                        {{ data.desc }}
+                    </div>
                 </div>
             </q-timeline-entry>
         </q-timeline>
@@ -121,6 +129,12 @@ export default defineComponent({
         { desc: "Management of Broker's group" },
         { desc: "Develop a system to manage operations (it's in my portfolio)" },
         { desc: 'Management of all tech stuffs inside company, like emails , domain, website, spreadsheets and more' }
+      ],
+      valutech: [
+        { desc: "I've Built a Django App to handle some data" },
+        { desc: 'Scraping with python to collect data from a website and plot charts, and saved them in DB' },
+        { desc: "I've Built an API to send data to Front-end from collected data, using Django Rest Framework" },
+        { desc: 'Handling user authentication to request data and more...' }
       ]
     })
     return { state }
