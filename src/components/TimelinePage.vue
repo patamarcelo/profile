@@ -95,6 +95,8 @@
                     </div>
                 </div>
             </q-timeline-entry>
+            <q-timeline-entry heading class="text-bold">
+            </q-timeline-entry>
         </q-timeline>
     </div>
 </template>
