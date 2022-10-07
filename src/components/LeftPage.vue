@@ -59,6 +59,10 @@ export default defineComponent({
           title: 'Website',
           info: 'https://mpata.eth.limo | password: #!/devmp'
         }, {
+          icon: 'fa-solid fa-folder-open',
+          title: 'Portfolio',
+          info: 'https://react-portfolio-mp.netlify.app/'
+        }, {
           icon: 'fas fa-birthday-cake',
           title: 'Birth Date',
           info: 'Nov 21, 1988'
