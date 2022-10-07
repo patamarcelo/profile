@@ -19,9 +19,13 @@
     <q-section>
       <div id="skelport"></div>
       <q-btn class="glossy my-4" rounded color="primary" :loading="!!state.showSkelPort"
-        :label="!state.showPortfolio ? 'Show Portfolio' : 'Hide Portfolio'"
-        :icon="state.showPortfolio ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash'" @click="showPort()">
+        label="Go to my Portfolio Page"
+        icon-right="send" @click="showPortNewPage()">
       </q-btn>
+      <!-- <q-btn class="glossy my-4" rounded color="primary" :loading="!!state.showSkelPort"
+        :label="!state.showPortfolio ? 'Show Portfolio' : 'Hide Portfolio'"
+        :icon="state.showPortfolio ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash'" @click="showPortNewPage()">
+      </q-btn> -->
     </q-section>
     <template v-if="state.showPortfolio">
       <PanelsPortfolioPage />
@@ -79,7 +83,14 @@ export default defineComponent({
       }, 100)
     }
 
+    function showPortNewPage () {
+      const URL = 'https://react-portfolio-mp.netlify.app/'
+      window.open(URL, '_blank')
+    }
+
     function showPort () {
+      const URL = 'https://react-portfolio-mp.netlify.app/'
+      window.open(URL, '_blank')
       if (!state.showPortfolio) {
         state.showSkelPort = true
         scrollToBottom()
@@ -92,7 +103,7 @@ export default defineComponent({
         state.showPortfolio = false
       }
     }
-    return { state, system, showPort, project }
+    return { state, system, showPort, project, showPortNewPage }
   }
 
 })
