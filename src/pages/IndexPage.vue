@@ -18,7 +18,7 @@
     </div>
     <q-section>
       <div id="skelport"></div>
-      <q-btn class="glossy my-4" rounded color="primary" :loading="!!state.showSkelPort"
+      <q-btn class="glossy my-4 lg:block sm:hidden " rounded color="primary" :loading="!!state.showSkelPort"
         label="Go to my Portfolio Page"
         icon-right="send" @click="showPortNewPage()">
       </q-btn>
