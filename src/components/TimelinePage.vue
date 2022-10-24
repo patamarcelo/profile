@@ -72,7 +72,8 @@
             <q-timeline-entry title="Crosskin" subtitle="2019 - 2020" class="w-full" icon="fas fa-tshirt">
                 <div>
                     Investment with a partner, of a brand that was not currently working. Sportswear company/brand
-                    focused on sports, mainly Crossift.
+                    focused on sports, mainly Crossift, to see more visit: <a class="italic text-blue-800 underline"
+                        target="_blank" href="https://www.crosskin.com.br/">www.crosskin.com.br</a><br />
                     Performance of almost all functions within the company, such as:
                     <div v-for="(data, index) in state.crosskin" :key="index" class="m-1 mt-2 mr-9 ">
                         <q-icon class="ml-3 text-gray-700 mr-1 mb-1 align-text-bottom" name="fas fa-circle"
@@ -112,6 +113,7 @@ export default defineComponent({
         { desc: 'ajuda geral na obra' }
       ],
       crosskin: [
+        { desc: 'Developed an Ecommerce from scratch using Wix Platform' },
         { desc: 'General financial services' },
         { desc: 'Raw material purchase' },
         { desc: 'Product development' },
