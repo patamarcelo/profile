@@ -10,7 +10,8 @@
                         </h1>
                     </div>
                     <p class="text-justify">
-                        Graduated in Bussiness Administration, but passionate about technology, I started the Computer Science
+                        Graduated in Bussiness Administration, but passionate about technology, I started the Computer
+                        Science
                         College
                         at the age of 18 but soon changed to Business Administration because of the family company, and
                         in
@@ -27,7 +28,7 @@
                 </div>
             </q-section>
 
-            <q-section class="mb-10 w-full">
+            <q-section class="mb-5 w-full">
                 <div class="flex row w-full">
                     <h1 class="text-gray-600 text-xl  mb-6">
                         {{ state.title_education }}
@@ -35,15 +36,32 @@
                         <q-separator color="" size="2px" />
                     </h1>
                 </div>
-                <div class="inline-grid gap-3">
+                <div class="inline-grid gap-2">
                     <p class="text-gray-600">
                         July 2008 - December 2013
                     </p>
                     <p class="text-bold">
                         Pontifical Catholic University Of Rio Grande Do Sul
                     </p>
+                    <p class="text-gray-600 italic text-bold">
+                        Graduated - Bussiness
+                    </p>
+
+                </div>
+            </q-section>
+            <div class="w-1/2 mb-5">
+                <q-separator />
+            </div>
+            <q-section class="mb-10 w-full">
+                <div class="inline-grid gap-2">
                     <p class="text-gray-600">
-                        Bussiness
+                        December 2022 - December 2023
+                    </p>
+                    <p class="text-bold">
+                        Pontifical Catholic University Of Rio Grande Do Sul
+                    </p>
+                    <p class="text-gray-600 italic text-bold">
+                        Graduating - Full Stack Development
                     </p>
 
                 </div>
@@ -89,8 +107,8 @@
                 </div>
                 <q-container class="ml-3">
                     <div class="flex justify-between w-[70%]">
-                        <q-chip v-for="(data, index) in state.data_skills" :key="index" class="bg-blue-100 lg:mx-3 mx-1 my-5"
-                            size="16px">
+                        <q-chip v-for="(data, index) in state.data_skills" :key="index"
+                            class="bg-blue-100 lg:mx-3 mx-1 my-5" size="16px">
                             <q-avatar v-if="data.type == 'icon'" :icon="data.icon" class="bg-indigo-300"
                                 text-color="white" size="32px" />
 
@@ -185,4 +203,5 @@ export default defineComponent({
 </script>
 
 <style>
+
 </style>
