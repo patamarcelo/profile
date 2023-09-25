@@ -8,7 +8,7 @@
             <img :src="system.picture" class="object-cover">
           </q-avatar>
           <h1 class="text-white text-xl text-bold mt-5">Marcelo <b class="text-blue">Pata</b></h1>
-          <h6 class="text-white italic"> Web Developer | Back-end | Front-end </h6>
+          <h6 class="text-white italic"> Developer | Back-end | Front-end </h6>
         </div>
         <left-page />
       </div>
