@@ -113,7 +113,7 @@
                                 text-color="white" size="32px" />
 
                             <q-avatar v-else>
-                                <img :src="data.icon" class="object-cover" />
+                                <img :src="data.icon" class="object-cover p-1" />
                             </q-avatar>
 
                             {{ data.name }}
@@ -184,6 +184,7 @@ export default defineComponent({
         { icon: 'https://storageapi2.fleek.co/7d351ace-1fcf-4bc2-be39-c54631049d11-bucket/icons/pinia.svg', name: 'Pinia', type: 'pic' },
         { icon: 'https://cdn.quasar.dev/logo-v2/svg/logo.svg', name: 'Quasar Framework', type: 'pic' },
         { icon: 'https://storageapi2.fleek.co/7d351ace-1fcf-4bc2-be39-c54631049d11-bucket/icons/react.svg', name: 'React', type: 'pic' },
+        { icon: 'https://storageapi2.fleek.co/7d351ace-1fcf-4bc2-be39-c54631049d11-bucket/icons/react.svg', name: 'React Native', type: 'pic' },
         { icon: 'https://storageapi2.fleek.co/7d351ace-1fcf-4bc2-be39-c54631049d11-bucket/icons/css.svg', name: 'CSS', type: 'pic' },
         { icon: 'https://storageapi2.fleek.co/7d351ace-1fcf-4bc2-be39-c54631049d11-bucket/icons/html.svg', name: 'HTML5', type: 'pic' },
         { icon: 'https://storageapi2.fleek.co/7d351ace-1fcf-4bc2-be39-c54631049d11-bucket/icons/boot.svg', name: 'Bootstrap', type: 'pic' },

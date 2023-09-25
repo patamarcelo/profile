@@ -57,7 +57,7 @@ export default defineComponent({
         }, {
           icon: 'fas fa-globe',
           title: 'Website',
-          info: 'https://mpata.eth.limo | password: #!/devmp'
+          info: 'https://mpata.eth.limo/#/ | password: #!/devmp'
         }, {
           icon: 'fa-solid fa-folder-open',
           title: 'Portfolio',

@@ -84,20 +84,29 @@
             </q-timeline-entry>
 
             <q-timeline-entry title="Valutech" subtitle="2021 - Current Working..." class="w-full"
-                icon="fas fa-chart-line">
-                <div>
-                    Investor in a Valuation startup, working together with the other partners in decision-making for the
-                    company and all sectors, especially in strategic decisions. Working as developer to help team as
-                    well.
-                    <div v-for="(data, index) in state.valutech" :key="index" class="m-1 mt-2 mr-9 ">
-                        <q-icon class="ml-3 text-gray-700 mr-1 mb-1 align-text-bottom" name="fas fa-circle"
-                            style="font-size: 0.5em;" />
-                        {{ data.desc }}
-                    </div>
+            icon="fas fa-chart-line">
+            <div>
+                Investor in a Valuation startup, working together with the other partners in decision-making for the
+                company and all sectors, especially in strategic decisions. Working as developer to help team as
+                well.
+                <div v-for="(data, index) in state.valutech" :key="index" class="m-1 mt-2 mr-9 ">
+                    <q-icon class="ml-3 text-gray-700 mr-1 mb-1 align-text-bottom" name="fas fa-circle"
+                    style="font-size: 0.5em;" />
+                    {{ data.desc }}
                 </div>
-            </q-timeline-entry>
-            <q-timeline-entry heading class="text-bold">
-            </q-timeline-entry>
+            </div>
+        </q-timeline-entry>
+        <q-timeline-entry title="Diamante Agrícola" subtitle="2023 - Current Working..." class="w-full"
+            icon="fas fa-chart-line">
+            <div>
+                Building... and adding to my Portfolio Page.
+                <div v-for="(data, index) in state.diamante" :key="index" class="m-1 mt-2 mr-9 ">
+                    <q-icon class="ml-3 text-gray-700 mr-1 mb-1 align-text-bottom" name="fas fa-circle"
+                        style="font-size: 0.5em;" />
+                    {{ data.desc }}
+                </div>
+            </div>
+        </q-timeline-entry>
         </q-timeline>
     </div>
 </template>
@@ -135,10 +144,16 @@ export default defineComponent({
         { desc: 'Management of all tech stuffs inside company, like emails , domain, website, spreadsheets and more' }
       ],
       valutech: [
-        { desc: "I've Built a Django App to handle some data" },
+        { desc: "I've Built a Django App to handle financial data" },
         { desc: 'Scraping with python to collect data from a website and plot charts, and saved them in DB' },
         { desc: "I've Built an API to send data to Front-end from collected data, using Django Rest Framework" },
         { desc: 'Handling user authentication to request data and more...' }
+      ],
+      diamante: [
+        { desc: 'Number 1' },
+        { desc: 'Number 2' },
+        { desc: 'Number 3' },
+        { desc: 'Number 4' }
       ]
     })
     return { state }
