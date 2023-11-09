@@ -10,17 +10,16 @@
                         </h1>
                     </div>
                     <p class="text-justify">
-                        Graduated in Bussiness Administration, but passionate about technology, I started the Computer
-                        Science
-                        College
-                        at the age of 18 but soon changed to Business Administration because of the family company, and
-                        in
-                        the last 14 years I have worked there, but always in the system, data part , controls and
-                        worksheets. in the last 6 years i started studying python and developing small projects, soon i
-                        also
-                        turned to javascript to be able to work on the front and then i started to develop the system to
-                        control the operations of my own company. I learned pretty much everything on the internet by
-                        myself.</p>
+                      Graduated in Bussiness Administration, but passionate about technology, I started the Computer
+                      Science
+                      College
+                      at the age of 18 but soon changed to Business Administration because of my family's company, and
+                      between 2008 - 2022 i  have worked there, but always in the system, data part , controls and
+                      worksheets. Since 2017 i started studying python and developing small projects, soon i
+                      also
+                      turned to javascript to be able to work on the front and then i started to develop the system to
+                      control the operations of my own company. I learned pretty much everything on the internet by
+                      myself.</p>
                     <span class="mt-3">
 
                         <b class="italic mt-5">Good at solving problems and passionate about them </b>&#x1F601;

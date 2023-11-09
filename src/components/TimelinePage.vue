@@ -99,7 +99,9 @@
         <q-timeline-entry title="Diamante Agrícola" subtitle="2023 - Current Working..." class="w-full"
             icon="fas fa-chart-line">
             <div>
-                Building... and adding to my Portfolio Page.
+              Acting as a Data Analyst and Quality Analyst do Applications in a Huge Agro Business Company in North from Brazil.
+              I've Built a FullStack Web System to help me manage data and control all applications
+              across a large area of the company's plantations.
                 <div v-for="(data, index) in state.diamante" :key="index" class="m-1 mt-2 mr-9 ">
                     <q-icon class="ml-3 text-gray-700 mr-1 mb-1 align-text-bottom" name="fas fa-circle"
                         style="font-size: 0.5em;" />
@@ -150,10 +152,14 @@ export default defineComponent({
         { desc: 'Handling user authentication to request data and more...' }
       ],
       diamante: [
-        { desc: 'Number 1' },
-        { desc: 'Number 2' },
-        { desc: 'Number 3' },
-        { desc: 'Number 4' }
+        { desc: 'Django App for backend, PostgreSql as database for this section' },
+        { desc: 'Django Rest Framework to handle a lot of APi`s used in front-end' },
+        { desc: 'React App for front-End' },
+        { desc: 'Firebase for user Authentication and Firebase Firestore (noSql) to handle Truck Loads' },
+        { desc: 'Integration of googleSheets and ReactApp using fetch to show data' },
+        { desc: 'Created tons of scripts to automate data population to consuming company`s main software  API`s and saving in different kinds of Database, like PostgreSql, MongoDB' },
+        { desc: 'Plot Maps of diffrents farms and plantations using Google Maps Api' },
+        { desc: 'and more...' }
       ]
     })
     return { state }
